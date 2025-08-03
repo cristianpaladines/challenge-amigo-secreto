@@ -35,7 +35,6 @@ function sortearAmigo(){
     console.log("HOLA MUNDO DESDE SORTEAR")
     let elementoSorteado = document.getElementById("resultado");
     let prueba = Math.floor(Math.random()*amigos.length);
-
     let lista = document.getElementById("listaAmigos");
 
     if (amigos.length == 0){
