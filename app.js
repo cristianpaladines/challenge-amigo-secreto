@@ -35,11 +35,24 @@ function sortearAmigo(){
     console.log("HOLA MUNDO DESDE SORTEAR")
     let elementoSorteado = document.getElementById("resultado");
     let prueba = Math.floor(Math.random()*amigos.length);
+
+    let lista = document.getElementById("listaAmigos");
+
     if (amigos.length == 0){
         console.log("Lista vacia")
     } else{
         console.log(prueba, "=", amigos[prueba])
         elementoSorteado.innerHTML = `<li>El amigo secreto sorteado es: ${amigos[prueba]}</li>`;
     }
+
+    lista.innerHTML = "";
+    amigos = [];
+
 }
+
+document.getElementById("amigo").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        agregarAmigo();
+    }
+});
 
