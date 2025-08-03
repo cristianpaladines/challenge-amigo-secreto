@@ -27,13 +27,19 @@ function mostrarAmigos(){
     lista.innerHTML = "";
     for (let i=0; i < amigos.length; i++){
         console.log("Lista para for: ", amigos[i]);
-        lista.innerHTML = `<li>${amigos[i]}</li>` + lista.innerHTML;
+        lista.innerHTML = lista.innerHTML + `<li>${amigos[i]}</li>`;
     }
 }
 
 function sortearAmigo(){
     console.log("HOLA MUNDO DESDE SORTEAR")
+    let elementoSorteado = document.getElementById("resultado");
     let prueba = Math.floor(Math.random()*amigos.length);
-    console.log(prueba) 
+    if (amigos.length == 0){
+        console.log("Lista vacia")
+    } else{
+        console.log(prueba, "=", amigos[prueba])
+        elementoSorteado.innerHTML = `<li>El amigo secreto sorteado es: ${amigos[prueba]}</li>`;
+    }
 }
 

@@ -31,13 +31,20 @@ body {
 }
 
 /* Banner */
-.header-banner {
+/* .header-banner {
     flex: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
+} */
+ .header-banner {
+  background: linear-gradient(to top,  #4B69FD, #FF00F5);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
+
 
 /* Sección de entrada */
 .input-section {
